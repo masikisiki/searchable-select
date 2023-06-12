@@ -1,0 +1,22 @@
+<div class="fd-select-container">
+  <div class="select-handler" (click)="toggle()">
+    <div>{{selectedItemDisplay ?? defaultLabel}}</div>
+    <i *ngIf="!collapsed" class="bi bi-caret-down-fill"></i>
+    <i *ngIf="collapsed" class="bi bi-caret-up-fill"></i>
+  </div>
+  <div class="options" *ngIf="!collapsed">
+    <div class="search" *ngIf="data.length > 6">
+      <i class="bi bi-search"></i>
+      <input type="text" [(ngModel)]="searchTerm">
+      <i class="bi bi-x" *ngIf="searchTerm.length > 0" (click)="searchTerm =''"></i>
+    </div>
+    <ng-container *ngIf="type === 'simple'; else complex">
+      <div class="option" (click)="select(item)" *ngFor="let item of data |itemSearch : searchTerm ">{{item}}</div>
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #complex>
+  <div class="option" (click)="select(item)"
+       *ngFor="let item of data |itemSearch : searchTerm ">{{item[displayKey!]}}</div>
+</ng-template>

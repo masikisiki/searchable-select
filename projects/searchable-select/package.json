@@ -1,0 +1,20 @@
+{
+  "name": "fd-searchable-select",
+  "version": "1.0.4",
+  "description": "Basic select dropdown module with search box",
+  "repository": {
+    "url": "https://github.com/masikisiki/searchable-select.git",
+    "type": "git"
+  },
+  "author": {
+    "email": "masikisiki@gmail.com",
+    "name": "Lizo Masikisiki"
+  },
+  "peerDependencies": {
+    "@angular/common": "^15.2.0",
+    "@angular/core": "^15.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

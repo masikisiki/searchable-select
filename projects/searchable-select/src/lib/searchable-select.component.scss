@@ -1,0 +1,84 @@
+.fd-select-container {
+  margin: 3px 1px;
+  width:  95%;
+  max-width: 400px;
+  cursor: pointer;
+  color: #353935;
+  font-weight: 600;
+  position: relative;
+}
+
+.fd-select-container .select-handler {
+  background-color: white;
+  padding: 6px;
+  border: 0.1rem solid #dedede;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.93rem;
+}
+
+.fd-select-container .options {
+  position: absolute;
+  z-index: 99;
+  width:  100%;
+  background-color: white;
+  border-radius: 5px;
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #888888 #f0f0f0;
+}
+
+.fd-select-container .options .search {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  margin: 2px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid gainsboro;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.fd-select-container .options .search i {
+  width: 25px;
+}
+
+.fd-select-container .options .search input {
+  width: calc(100% - 40px);
+  outline: none;
+  border: none;
+}
+
+.fd-select-container .options .search:hover,
+.fd-select-container .options .search:focus {
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.fd-select-container .options .option {
+  font-size: 1rem;
+  margin: 1px;
+  padding: 5px 4px;
+}
+
+.fd-select-container .options .option:hover {
+  background-color: #dedede;
+}
+
+.options::-webkit-scrollbar {
+  width: 8px;
+}
+
+.options::-webkit-scrollbar-track {
+  background: #dedede;
+}
+
+.options::-webkit-scrollbar-thumb {
+  background-color: #353935;
+  border-radius: 20px;
+  border: 3px solid #353935;
+}
